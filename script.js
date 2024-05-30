@@ -1,4 +1,4 @@
-// function loading(){
+function loading(){
     var tl = gsap.timeline()
     tl.to(".loader",{
         transform:"translateX(-100%)",
@@ -14,8 +14,8 @@
         stagger:0.1
     })
     
-// }
-// loading()
+}
+loading()
 
 
 var tl = gsap.timeline({
@@ -29,7 +29,6 @@ var tl = gsap.timeline({
     }
 })
 tl.to("#box1",{
-    // width:0, 
     transform:"translateX(-100%)",
 },"a")
 // tl.to(".akaru",{
@@ -54,13 +53,9 @@ tl.to(".inner-box",{
     height:"50%"
 },"a")
 tl.to(".inner-box img",{
-    // height:"70%"
     scale:1
 },"a")
 tl.to(".imerge",{
-    // height:"70%"
-    // scale:1
-    // display:"inline"
     opacity:1
 },"a")
 
@@ -80,7 +75,6 @@ tl.to("#box4",{
 },"a")
 
 tl.to("#box2",{
-    // width:"0%"
     transform:"translateX(-100%)",
     
 },"b")
@@ -100,13 +94,9 @@ tl.to(".inner-box2",{
     bottom:"50%"
 },"b")
 tl.to(".inner-box2 img",{
-    // height:"100%",
     scale:1
-    // bottom:"50%"
 },"b")
 tl.to("#box3",{
-    // right:"100%",
-    // width:"0%"
     transform:"translateX(-100%)",
 
 },"c")
@@ -118,21 +108,18 @@ tl.to(".inner-box3",{
     bottom:"50%"
 },"c")
 tl.to(".inner-box3 img",{
-    // height:"100%",
     scale:1
-    // bottom:"50%"
 },"c")
 
 
 
 
-const colors = ['#E49366', '#798E7B', '#B692A1', '#BFCCD8']; // Add more colors as needed
+const colors = ['#E49366', '#798E7B', '#B692A1', '#BFCCD8']; 
 
 document.querySelectorAll('.nav-links a').forEach((link, index) => {
     const circle = document.createElement('div');
     circle.classList.add('circle');
     
-    // Set the color from the colors array
     circle.style.backgroundColor = colors[index % colors.length];
 
 
@@ -147,15 +134,12 @@ document.querySelectorAll('.nav-links a').forEach((link, index) => {
     });
 });
 gsap.from("#box2 .imerge", {
-    // width :"50vw", 
     y:"100%",
-    // x:100,
     stagger:0.05,
     opacity:0,
     scrollTrigger:{
         trigger:"#box2",
         scroller:"body",
-        // markers:true,
         start : "top -10%",
         end:"top -20%",
         scrub:2,
@@ -169,7 +153,6 @@ gsap.from("#box3 .imerge", {
     scrollTrigger:{
         trigger:"#box3",
         scroller:"body",
-        markers:true,
         start : "top -40%",
         end:"top -50%",
         scrub:2,
@@ -183,7 +166,6 @@ gsap.from("#box4 .imerge", {
     scrollTrigger:{
         trigger:"#box4",
         scroller:"body",
-        markers:true,
         start : "top -80%",
         end:"top -90%",
         scrub:2,
